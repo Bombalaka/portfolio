@@ -3,6 +3,7 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Suspense fallback={null}>
+        <Contact />
+      </Suspense>
       
     </main>
   );
