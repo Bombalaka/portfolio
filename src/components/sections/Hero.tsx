@@ -87,15 +87,31 @@ export default function Hero() {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-700">
-            A <span className="bg-yellow-300 px-2 py-1 rounded font-medium">Cloud Developer</span> who loves building cool stuff with{" "}
-            <span className={`px-2 py-1 rounded font-medium transition-all duration-300 ${activeTag === 0 ? 'bg-blue-500 text-white scale-110' : 'bg-blue-200'}`}>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            A{" "}
+            <span className="inline-flex items-center bg-yellow-300 px-2 py-0.5 rounded font-medium align-middle">
+              Cloud Developer
+            </span>{" "}
+            who loves building cool stuff with{" "}
+            <span
+              className={`inline-flex items-center px-2 py-0.5 rounded font-medium align-middle transition-all duration-300 ${
+                activeTag === 0 ? "bg-blue-500 text-white scale-110" : "bg-blue-200"
+              }`}
+            >
               C#
             </span>,{" "}
-            <span className={`px-2 py-1 rounded font-medium transition-all duration-300 ${activeTag === 1 ? 'bg-orange-500 text-white scale-110' : 'bg-orange-200'}`}>
+            <span
+              className={`inline-flex items-center px-2 py-0.5 rounded font-medium align-middle transition-all duration-300 ${
+                activeTag === 1 ? "bg-orange-500 text-white scale-110" : "bg-orange-200"
+              }`}
+            >
               AWS
             </span>, and{" "}
-            <span className={`px-2 py-1 rounded font-medium transition-all duration-300 ${activeTag === 2 ? 'bg-cyan-500 text-white scale-110' : 'bg-cyan-200'}`}>
+            <span
+              className={`inline-flex items-center px-2 py-0.5 rounded font-medium align-middle transition-all duration-300 ${
+                activeTag === 2 ? "bg-cyan-500 text-white scale-110" : "bg-cyan-200"
+              }`}
+            >
               Flutter
             </span>!
           </p>

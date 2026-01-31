@@ -19,9 +19,33 @@ const nunito = Nunito({
 });
 
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://yotaka-portfolio.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Yotaka | Software & Cloud Developer",
-  description: "Portfolio of Yotaka Khaowgomol - Software & Cloud Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Yotaka | Software & Cloud Developer",
+    template: "%s | Yotaka",
+  },
+  description:
+    "Portfolio of Yotaka Khaowgomol — Cloud Developer learning C#, AWS, and Flutter.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Yotaka | Software & Cloud Developer",
+    description:
+      "Portfolio of Yotaka Khaowgomol — Cloud Developer learning C#, AWS, and Flutter.",
+    url: siteUrl,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yotaka | Software & Cloud Developer",
+    description:
+      "Portfolio of Yotaka Khaowgomol — Cloud Developer learning C#, AWS, and Flutter.",
+  },
 };
 
 export default function RootLayout({
